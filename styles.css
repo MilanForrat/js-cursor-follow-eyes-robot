@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(./background.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+.eyes{
+    position: absolute;
+    top: 40%;
+    transform: translateY(-46%);
+    width: 100%;
+    text-align: center;
+}
+.eye{
+    width: 63px;
+    height: 63px;
+    display: inline-block;
+    margin: 14px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 5px solid rgba(0, 0, 0, 0.678);
+}
+
+.eye-ball{
+    width: 20px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.603);
+    position: absolute;
+    top: 20%;
+    left:30%;
+    transform: translate(50%, 50%);
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px rgb(242, 255, 0);
+}
+#robot{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: -100;
+    transform: translateX(-50%);
+}
