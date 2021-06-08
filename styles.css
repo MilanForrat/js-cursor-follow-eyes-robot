@@ -96,6 +96,9 @@ body{
 #left-button img, #right-button img{
     width: 50%;
 }
+#left-button:hover, #right-button:hover{
+    transition: 0.4s;
+}
 #left-arm{
     display: inline-block;
     position: relative;
@@ -104,7 +107,7 @@ body{
     z-index: 500;
 }
 #left-arm:hover{
-    transition: 2s;
+    transition: 1s;
     position: relative;
     top: 58.20%;
     transform-origin: center;
@@ -113,17 +116,40 @@ body{
 #right-arm{
     display: inline-block;
     position: relative;
-    top: 62.20%;
-    left: 54%;
+    top: 64%;
+    left: 55%;
     transition: 1s;
     z-index: 500;
 }
 #right-arm:hover{
     display: inline-block;
-    transition: 2s;
+    transition: 1s;
     position: relative;
     left: 55.5%;
-    top: 62.20%;
+    top: 61.20%;
     transform-origin: center;
     transform: rotate(-15deg);
+}
+#top-button{
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: #604AFF;
+    border: 4px solid black;
+    box-shadow: 1px 1px 10px black;
+    top: 0.3%;
+    left: 44.5%;
+}
+#popover-title-html{
+    text-align: center;
+}
+.progress{
+    position: absolute;
+    width: 97px;
+    height: 16px;
+    top:67.7%;
+    left: 41.8%;
+    border: 2px solid black;
+    border-radius: 10px;
 }
