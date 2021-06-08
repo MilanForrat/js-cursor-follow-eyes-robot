@@ -9,6 +9,8 @@ body{
     background-size: cover;
     height: 100vh;
     width: 100vw;
+    z-index: 0;
+    overflow: hidden;
 }
 .eyes{
     position: absolute;
@@ -40,13 +42,88 @@ body{
     box-shadow: 1px 1px 5px rgb(242, 255, 0);
 }
 #robot{
-    background-image: url(./robot.png);
+    background-image: url(./robot-arms/robot.png);
     background-repeat: no-repeat;
     height: 640px;
     width: 543px;
     position: relative;
     top: 32%;
     left: 50%;
-    z-index: -100;
+    z-index: 100;
     transform: translateX(-50%);
+}
+#right-button{
+    background-color: red;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    position: absolute;
+    top: 68%;
+    left: 61.5%;
+    border: 5px solid black;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px black;
+    z-index: 150;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#left-button{
+    background-color: red;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    position: absolute;
+    top: 68%;
+    left: 33.5%;
+    border: 5px solid black;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px black;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#screen{
+    border-radius: 3px;
+    position: absolute;
+    top: 49.20%;
+    left: 33.5%;
+    width: 183px;
+    border: 11px solid rgb(51, 51, 51);
+    background-color: black;
+}
+#left-button img, #right-button img{
+    width: 50%;
+}
+#left-arm{
+    display: inline-block;
+    position: relative;
+    top: 62%;
+    transition: 1s;
+    z-index: 500;
+}
+#left-arm:hover{
+    transition: 2s;
+    position: relative;
+    top: 58.20%;
+    transform-origin: center;
+    transform: rotate(15deg);
+}
+#right-arm{
+    display: inline-block;
+    position: relative;
+    top: 62.20%;
+    left: 54%;
+    transition: 1s;
+    z-index: 500;
+}
+#right-arm:hover{
+    display: inline-block;
+    transition: 2s;
+    position: relative;
+    left: 55.5%;
+    top: 62.20%;
+    transform-origin: center;
+    transform: rotate(-15deg);
 }

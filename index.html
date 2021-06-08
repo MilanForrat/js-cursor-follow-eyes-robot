@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Petit projet JS sur la thématique du suivie de la position du curseur de l'utilisateur et l'interaction du DOM en conséquence">
+    <!-- CSS bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">  
     <link rel="stylesheet" href="./styles.css">
     <title>JS - The Eyes</title>
 </head>
@@ -13,16 +15,39 @@
         <div class="eyes">
             <div class="eye">
                 <div class="eye-ball">
-    
                 </div>
             </div>
             <div class="eye">
                 <div class="eye-ball">
-                    
                 </div>
             </div>
         </div>
+        <img  id="left-arm" src="./robot-arms/robot-left-arm.png" alt="bras gauche du robot">
+        <img  id="right-arm" src="./robot-arms/robot-right-arm.png" alt="bras droit du robot">
+        <div id="screen">
+            <div id="carouselRobot" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./screen-images/1.jpg" class="d-block w-100" alt="image décorative de l'espace et de la planète Terre dans l'écran du robot">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./screen-images/2.jpg" class="d-block w-100" alt="image décorative de l'espace et de la planète Terre dans l'écran du robot">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./screen-images/3.jpg" class="d-block w-100" alt="image décorative de l'espace et de la planète Terre dans l'écran du robot">
+                  </div>
+                </div>
+              </div>
+        </div>
+        <button id="left-button" type="button" data-bs-target="#carouselRobot" data-bs-slide="prev">
+            <img src="./screen-images/AV.svg" alt="">
+        </button>
+        <button id="right-button" type="button" data-bs-target="#carouselRobot" data-bs-slide="next">
+            <img src="./screen-images/AP.svg" alt="">
+        </button>
     </div>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <script src="./app.js"></script>
 </body>
 </html>
