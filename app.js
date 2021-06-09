@@ -5,7 +5,9 @@ let leftArm = document.querySelector('#left-arm');
 let rightArm = document.querySelector('#right-arm');
 let topButton = document.querySelector('#top-button');
 let progressOne = document.querySelector('#progress-1');
-
+let moveable = document.querySelectorAll('.moveable');
+let toolBox = document.querySelector('#box');
+let offCanvasBox = document.querySelector('.offcanvas-body');
 
 leftButton.style.transition = "all 0.3s";
 leftArm.style.transition = "all 0.7s";
@@ -51,34 +53,7 @@ var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggl
 var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
   return new bootstrap.Popover(popoverTriggerEl)
 });
-
-// let reload = true;
-// function progress(reload){
-//     if(reload == true){
-//         for(let i=0; i <= 100; i++){
-//             setInterval(function(){
-//                 progressOne.style.width = i+"px";    
-//             },100); 
-//             if(i == 100) {
-//             reload = false;
-//             }
-//         }
-//     }
-//     else{
-//         for(let j=100; j >= 0; j--){
-//             setInterval(function(){
-//                 progressOne.style.width = j+"px";
-//             },100); 
-//             if(j == 0) {
-//             reload = true;
-//             }
-//         }
-//     }
-// }
-
-// progress();
-         
-            
+             
 let progressBar = 0;
 function progressBarUp(){
     // console.log(progressBar);
@@ -109,4 +84,54 @@ function progressBarDown() {
     },200); 
 }
 progressBarUp();
-   
+
+let pince = document.getElementById('pince');
+let marteau = document.getElementById('marteau');
+let tournevis = document.getElementById('tournevis');
+let metre = document.getElementById('metre');
+let cle = document.getElementById('cle');
+let cuter = document.getElementById('cuter');
+
+// cuter.addEventListener('dragstart', dragStart);
+// pince.addEventListener('dragstart', dragStart);
+// marteau.addEventListener('dragstart', dragStart);
+// tournevis.addEventListener('dragstart', dragStart);
+// metre.addEventListener('dragstart', dragStart);
+// cle.addEventListener('dragstart', dragStart);
+
+toolBox.addEventListener('dragover', dragOver);
+toolBox.addEventListener('dragenter', dragEnter)
+toolBox.addEventListener('dragleave', dragLeave);
+toolBox.addEventListener('drop', dragDrop);
+
+function dragOver(e){
+    // on preventDefault car dragOver à un évènement de base qu'on ne souhaite pas
+    e.preventDefault();
+    // console.log("over");
+}
+function dragEnter(e){
+    // on preventDefault car dragOver à un évènement de base qu'on ne souhaite pas
+    e.preventDefault();
+    // console.log("enter");
+    this.className += " hovered";
+}
+function dragLeave(){
+    //  console.log("leave");
+    // toolBox.style.filter = "brithness(1.5)";
+}
+let count = 0;
+function dragDrop(){
+    //  console.log("drop");
+    // for(i=count; i < count+1; i++){
+    //     this.append(moveable[i]);
+    //     let newElement = document.createElement('img');
+    //     newElement = moveable[i];
+    //     console.log(newElement)
+    //     offCanvasBox.appendChild(newElement);
+    // }
+    // count++;
+    // console.log(count)
+    
+    // tester avec un switch pour récupérer élément par élément
+
+}

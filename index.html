@@ -24,6 +24,16 @@
         </div>
         <img  id="left-arm" src="./robot-arms/robot-left-arm.png" alt="bras gauche du robot">
         <img  id="right-arm" src="./robot-arms/robot-right-arm.png" alt="bras droit du robot">
+        <img id="mouth" src="./robot-arms/mouth.png" alt="la bouche du robot">
+        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBox" aria-controls="offcanvasBox">
+          <img src="./tools/carton.png" alt="boite à outil" id="box">
+        </button>
+        <img src="./tools/cle.png" class="moveable" draggable="true" id="cle" alt="clé plate">
+        <img src="./tools/cuter.png" class="moveable" draggable="true" id="cuter"  alt="cuter">
+        <img src="./tools/marteau.png" class="moveable" id="marteau" alt="marteau">
+        <img src="./tools/pince.png" class="moveable" id="pince" alt="pince">
+        <img src="./tools/tournevis.png" class="moveable" id="tournevis" alt="tournevis">
+        <img src="./tools/metre.png" class="moveable" id="metre" alt="mètre">
         <div id="screen">
             <div id="carouselRobot" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
@@ -50,6 +60,15 @@
         </button>
         <a id="top-button"  role="button" tabindex="0" data-bs-toggle="popover" data-bs-html="true"  data-bs-trigger="focus" title="<em>Alors...</em>" data-bs-placement="top"  data-bs-content="As tu trouvé toutes les petites animations ? ♥"></a>
     </div>
+    <!-- offcanva -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasBox" aria-labelledby="offcanvasBoxLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasBoxLabel">Boite à outils</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body"></div>
+    </div>
+    <!-- end OffCanva -->
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <script src="./app.js"></script>
