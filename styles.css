@@ -4,11 +4,12 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url(./background.jpg);
+    /* background-image: url(./background-2.png); */
     background-position: center;
     background-size: cover;
-    height: 100vh;
-    width: 100vw;
+    background-repeat: no-repeat;
+    height: 800px;
+    width: 1533px;
     z-index: 0;
     overflow: hidden;
 }
@@ -46,8 +47,8 @@ body{
     background-repeat: no-repeat;
     height: 640px;
     width: 543px;
-    position: relative;
-    top: 32%;
+    position: absolute;
+    bottom: 0;
     left: 50%;
     z-index: 100;
     transform: translateX(-50%);
@@ -156,7 +157,7 @@ body{
 #mouth{
     position: absolute;
     top: 30%;
-    left: 21.5%;
+    left: 22.5%;
     transition: 0.1s;
     cursor: pointer;
 }
@@ -187,4 +188,109 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+#pannel{
+    position: absolute;
+    right: 6.3%;
+    top: 12%;
+    height: 26%;
+    width: 17%;
+    cursor: pointer;
+    transition: 1s;
+}
+#pannel:active{
+    transition: 1s;
+    opacity: 0.2;   
+}
+#background{
+    height: 100vh;
+    width: 100vw;
+}
+@media (max-width:1050px){
+    #robot,#left-arm,#right-arm,#mouth,#box{
+        transform: scale(0.8);
+    }
+    #robot{
+        bottom: 0;
+        left: 0;
+    }
+    #pince{
+        position:absolute;
+        top: -15%;
+        left: -55%;
+    }
+    #marteau{
+        position:absolute;
+        top: -31%;
+        left: 75%;
+    }
+    #metre{
+        position:absolute;
+        top: -31%;
+        left: 0;
+    }
+    #cuter{
+        position:absolute;
+        top: 41%;
+        left: -11%;
+    }
+    #tournevis{
+        position:absolute;
+        top: 91%;
+        left: 80%;
+    }
+    #box{
+        position: absolute;
+        bottom: 1%;
+        left: -10%;
+    }
+    #cle{
+        position:absolute;
+        top: 20%;
+        left: 80%;
+    }
+    #offcanvas-progress{
+        position: absolute;
+        top: 5%;
+        left: 35%;
+        background-color: rgba(245, 222, 179, 0.678);
+    }
+}
+@media(min-width: 1051px){
+    #pince{
+        position:absolute;
+        top: -15%;
+        left: -55%;
+    }
+    #marteau{
+        position:absolute;
+        top: -31%;
+        left: 85%;
+    }
+    #metre{
+        position:absolute;
+        top: -31%;
+        left: -30%;
+    }
+    #cuter{
+        position:absolute;
+        top: 41%;
+        left: -70%;
+    }
+    #tournevis{
+        position:absolute;
+        top: 81%;
+        left: 150%;
+    }
+    #cle{
+        position:absolute;
+        top: 20%;
+        left: 99%;
+    }
+    #offcanvas-progress{
+        position: absolute;
+        top: 5%;
+        left: 35%;
+        background-color: rgba(245, 222, 179, 0.678);
+    }
 }
