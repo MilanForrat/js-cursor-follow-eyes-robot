@@ -12,6 +12,7 @@ body{
     width: 1533px;
     z-index: 0;
     overflow: hidden;
+    user-select: none;
 }
 .eyes{
     position: absolute;
